@@ -19,7 +19,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const SideBar = () => {
+const SideBar = ({mode, setMode}) => {
   return (
     <Box flex="1" sx={{ display: { xs: "none", md: "block" } }}>
       <Box position="fixed">
@@ -40,14 +40,7 @@ const SideBar = () => {
               <ListItemText primary="Pages" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
-              <ListItemIcon>
-                <Storefront />
-              </ListItemIcon>
-              <ListItemText primary="MarketPlace" />
-            </ListItemButton>
-          </ListItem>
+         
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
@@ -77,7 +70,7 @@ const SideBar = () => {
               <ListItemIcon>
                 <DarkMode />
               </ListItemIcon>
-              <Switch />
+              <Switch onChange={()=>setMode(mode==="light"?"dark":"light")}/>
             </ListItemButton>
           </ListItem>
         </List>

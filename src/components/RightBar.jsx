@@ -51,18 +51,25 @@ const RightBar = () => {
         <Typography sx={{ fontWeight: 200 }} mt={2}>
           Recent Photos
         </Typography>
-        <ImageList>
+        <ImageList cols={3} rowHeight={100} gap={5}>
           <ImageListItem>
             <img
               src="https://cdn.pixabay.com/photo/2017/12/10/17/00/robot-3010309__480.jpg"
-              alt=""
+              alt="Picture"
               loading="lazy"
             />
           </ImageListItem>
           <ImageListItem>
             <img
               src="https://cdn.pixabay.com/photo/2015/04/25/23/32/wormhole-739872__480.png"
-              alt=""
+              alt="Picture"
+              loading="lazy"
+            />
+          </ImageListItem>
+          <ImageListItem>
+            <img
+              src="https://cdn.pixabay.com/photo/2018/05/02/09/29/auto-3368094__480.jpg"
+              alt="Picture"
               loading="lazy"
             />
           </ImageListItem>
