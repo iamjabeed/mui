@@ -1,78 +1,89 @@
-import { AccountBox, AutoStories, DarkMode, Group, Home, Person, Settings, Storefront, } from '@mui/icons-material'
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from '@mui/material'
-import React from 'react'
+import {
+  AccountBox,
+  AutoStories,
+  DarkMode,
+  Group,
+  Home,
+  Person,
+  Settings,
+  Storefront,
+} from "@mui/icons-material";
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Switch,
+} from "@mui/material";
+import React from "react";
 
 const SideBar = () => {
   return (
-    <Box flex="1"  sx={{display:{xs:"none", md:"block"}}}>
-       <List>
+    <Box flex="1" sx={{ display: { xs: "none", md: "block" } }}>
+      <Box position="fixed">
+        <List>
           <ListItem disablePadding>
-            <ListItemButton component="a" href='#'>
+            <ListItemButton component="a" href="#">
               <ListItemIcon>
-                <Home/>
+                <Home />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href='#'>
+            <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
-                <Group/>
-              </ListItemIcon>
-              <ListItemText primary="Group" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href='#simple-list'>
-              <ListItemIcon>
-                <AutoStories/>
+                <AutoStories />
               </ListItemIcon>
               <ListItemText primary="Pages" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href='#simple-list'>
+            <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
-                <Storefront/>
+                <Storefront />
               </ListItemIcon>
               <ListItemText primary="MarketPlace" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href='#simple-list'>
+            <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
-                <Person/>
+                <Person />
               </ListItemIcon>
               <ListItemText primary="Friends" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href='#simple-list'>
+            <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
-                <AccountBox/>
+                <AccountBox />
               </ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href='#simple-list'>
+            <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
-                <Settings/>
+                <Settings />
               </ListItemIcon>
               <ListItemText primary="Settings" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href='#simple-list'>
+            <ListItemButton component="a" href="#simple-list">
               <ListItemIcon>
-                <DarkMode/>
+                <DarkMode />
               </ListItemIcon>
               <Switch />
             </ListItemButton>
           </ListItem>
-          </List>
+        </List>
+      </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;
